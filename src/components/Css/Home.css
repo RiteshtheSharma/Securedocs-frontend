@@ -1,0 +1,31 @@
+.align_container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.imgProperty{
+    width:256px;
+    margin:40px
+}
+.left_align_img{
+    float:left 
+}
+.right_align_img{
+    float: right
+}
+.main_img_parent{
+    width:calc(100vw - 80px );
+    display:flex
+}
+
+@media only screen and (max-width: 570px) {
+    .imgProperty {
+      float:none;
+      margin:20px auto;
+      width: calc(100vw - 80px);
+    }
+    .main_img_parent{
+        width:calc(100vw - 40px );
+    }
+  }
