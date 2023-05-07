@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  table {
+              border:1px solid #b3adad;
+              border-collapse:collapse;
+              padding:5px ;
+    max-width:95%;
+          }
+          table th {
+              border:1px solid #b3adad;
+              padding:5px ;
+              color: #313030;
+          }
+          table td {
+              border:1px solid #b3adad;
+              text-align:left;
+              padding:5px ;
+              background: #ffffff;
+              color: #313030;
+          }
