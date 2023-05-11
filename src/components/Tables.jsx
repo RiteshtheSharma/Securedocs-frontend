@@ -291,10 +291,11 @@ dispatch(setAlert({'show':true,'severity':'success','msg':'Sucessfully renamed'}
   }
 
 
- const deleteFile = async (category,id)=>{
-  try{ await axios.delete(`${import.meta.env.VITE_BACKEND_URI}/api/file/deletefolder/${id}`,
+ const deleteFile = async (category,id)=>{const file = rows.filter(e=>e._id===id)
+
+  try{ await axios.delete(`${import.meta.env.VITE_BACKEND_URI}/api/file/deletefile/${id}`,
   {
-    headers: {'auth-token':localStorage.getItem('AUTH_TOKEN'),'folder':category }
+    headers: {'auth-token':localStorage.getItem('AUTH_TOKEN'),'folder':file[0].folder }
     
   }
   
@@ -303,9 +304,11 @@ dispatch(setAlert({'show':true,'severity':'success','msg':'Sucessfully renamed'}
   for(;i<rows.length;i++){
     if(rows[i]._id === id){break;}}
    rows.splice(i, 1);
-  dispatch(setAlert({'show':true,'severity':'success','msg':'Sucessfully deleted'}));}
+  dispatch(setAlert({'show':true,'severity':'success','msg':'Sucessfully deleted'}));
+ShowAllFiles(localStorage.getItem('AUTH_TOKEN'))}
 catch(err){
   dispatch(setAlert({'show':true,'severity':'error','msg':'Error while deleting'}));
+  console.log('error caused while deleting file',err)
 }
 
 
