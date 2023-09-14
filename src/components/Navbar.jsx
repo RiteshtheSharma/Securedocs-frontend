@@ -24,6 +24,7 @@ import { set } from '../store/slices/SearchTermSlice';
 import { useNavigate } from 'react-router-dom';
 import { memo } from 'react';
 import { useCallback,useEffect } from 'react';
+import SettingsIcon from '@mui/icons-material/Settings';
 //Navlink style object for navigation links when screen 's width is large 
 const LNavLinkStyles = ({ isActive }) => {
   return {
@@ -112,10 +113,10 @@ const handleDrawerToggle = () => {
   console.log(" navbar rerendered ",Items[0])
   return (
     
-    <Box sx={{ display: 'flex' ,marginBottom: { xs: '56px', sm: `${64}px` }}}>
+    <Box sx={{ display: 'flex' ,marginBottom: { xs: '56px', sm: `${64}px` },backgroundColor:'#1976D2'}}>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
+      <AppBar component="nav" sx={{minHeight:'56px !important'}}>
+        <Toolbar >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -131,16 +132,19 @@ const handleDrawerToggle = () => {
             variant="h6"
             component="div"
             color={'rgb(185, 204, 234)'}
-            mr={2} >
-            INotebook
+            mr={2} 
+            sx={{marginTop:'2px'}}>
+            SecureDocs
           </Typography>
           
-            {Items.map((item) => {console.log("item ",item,Items)
+            {Items.map((item) => {
               
               return(
 
             <Typography key={item} mr={2} sx={{ color: '#fff' ,textAlign:'right',flexGrow:((item ==='Logout'|| item ==='Login'  )?'1':'none')}} my={'auto'} >
-               <NavLink to={(item==="Home")?'':item.toLowerCase()} style={LNavLinkStyles} >{item}</NavLink>
+               <NavLink to={(item==="Home")?'':item.toLowerCase()} style={LNavLinkStyles} >
+               {(item==='Settings')?<SettingsIcon sx={{marginTop:'8px'}} />:item}
+               </NavLink>
                 
               </Typography>
               
@@ -157,7 +161,7 @@ const handleDrawerToggle = () => {
               <SearchIcon  />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Search"
               inputProps={{ 'aria-label': 'search' }}
               onChange={(e)=>setSearchTerm(e.target.value)}
             />

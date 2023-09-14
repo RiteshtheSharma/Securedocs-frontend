@@ -152,7 +152,7 @@ RemovePresentUserData()
   console.log("deleted sucessfully .... ")
     RemovePresentUserData();
     handleClose();}
-  return (<div style={{width: "100vw" }}>
+  return (<div style={{width: "100vw" ,marginTop:'50px'}}>
     <Typography variant='h3' my={3} sx={{textAlign:'center',fontWeight:'bold',fontSize:{sm:'3rem',xs:'1.5rem'}}}>Settings</Typography>
     <Box sx={{margin:'auto',border:'1px solid black',width:{sm:'50vw',xs:'80vw'},padding:'10px 20px'}}>   
     <Typography variant="overline" display="block" fontWeight='bold' gutterBottom>Email</Typography>

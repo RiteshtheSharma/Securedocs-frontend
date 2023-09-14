@@ -8,11 +8,11 @@ import MainImg from './images/LockedDoc.png'
 import './Css/Home.css'
 const Home = () => {
   return (
-    <div style={{margin:'40px 40px auto 40px ',}}>
+    <div style={{margin:'50px 40px auto 40px ',}}>
     <div style={{width:'calc(100vw - 80px )',display:"flex"}}><img src={MainImg} style={{width:'256px',margin:'auto'}}/></div>
     
     
-      <h1>Welcome to Safe Docs App</h1>
+      <h1 style={{marginTop:'40px'}}>Welcome to Safe Docs App</h1>
       <h3 style={{textAlign:'justify',margin:'20px 0'}}>Safe Docs is a secure document storage and sharing application designed to provide users with a reliable platform for managing their sensitive documents.</h3>
       
       <div className="align_container">

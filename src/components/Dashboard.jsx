@@ -135,14 +135,17 @@ fetchCat()
   return (
   
     
-    <div style={{ display: "flex", flexWrap: "wrap-reverse" }}>
+    <Box sx={{ display: "flex", flexWrap: {sm:'nowrap',xs:"wrap-reverse" },minHeight:{xs:'calc( 100vh - 56px )'}}}>
 
 
-      <Box sx={{ width: { sm: '50%', xs: "100%", }, marginTop: { sm: '0', xs: '20px' } }}>
+<Box sx={{paddingTop:{sm:'40px',xs:'0'}, width:{sm:'250px',xs:'100vw' }, bgcolor: '#EBECED', marginTop: { sm: '0', xs: '20px' } }}>
 
 
 
-        <Box sx={{ width: '100%', height: {sm:'100vh',xs:"100%"}, bgcolor: '#EBECED',maxWidth:{sm:'400px',xs:'100vw' }}}>
+<Box sx={{ width: '100%',}}>
+
+
+        
           <List component="nav" aria-label="main mailbox folders">
             <ListItemButton
               selected={selectedIndex === 0}
@@ -195,13 +198,13 @@ fetchCat()
               </ListItemIcon>
               <ListItemText primary="All files" />
             </ListItemButton>
-          </List></Box>
+          </List>
 
 
-
+</Box>
       </Box>
 
-      <Box sx={{ width: { sm: '50%', xs: "100%" }, display: "flex", flexDirection: "column", alignItems: "center" }} >
+      <Box sx={{ width: { sm: 'calc( 100% - 250px )', xs: "100%" },paddingTop:'40px', display: "flex", flexDirection: "column", alignItems: "center" ,justifyContent:{sm:'start',xs:'space-evenly'}}} >
         < AccountCircleIcon sx={{ fontSize: "200px", }} />
 
         <table >
@@ -234,7 +237,7 @@ fetchCat()
 
 
       </Box>
-    </div>
+    </Box>
   )
 }
 

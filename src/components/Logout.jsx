@@ -55,8 +55,8 @@ const removeAuth_Token =()=>{ dispatch(remove())}
      }
    }, [])
    
-  return (<ThemeProvider theme={theme}>
-    <Box  sx={{width:'100vw',minHeight:'100vh',backgroundColor:'#007FFF',display: 'flex',alignItems:'center',justifyContent:'center'}}>
+  return (<ThemeProvider theme={theme} >
+    <Box  sx={{minHeight:{sm:'calc( 100vh - 64px )',xs:'calc( 100vh - 56px )'},backgroundColor:'#007FFF',display: 'flex',alignItems:'center',justifyContent:'center'}}>
     <Box sx={{ display: 'flex',textAlign:'center',flexDirection:'column' , padding: '40px', border: '1px solid #ccc', borderRadius: '8px',backgroundColor:'white'}}><Box>
     <LogoutIcon sx={{fontSize:'100px'}} />
     
