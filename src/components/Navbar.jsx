@@ -24,10 +24,6 @@ import { set } from '../store/slices/SearchTermSlice';
 import { useNavigate } from 'react-router-dom';
 import { memo } from 'react';
 import { useCallback,useEffect } from 'react';
-<<<<<<< HEAD
-import SettingsIcon from '@mui/icons-material/Settings';
-=======
->>>>>>> 8d8f002425bb935a33992430a196a95dff2ff488
 //Navlink style object for navigation links when screen 's width is large 
 const LNavLinkStyles = ({ isActive }) => {
   return {
@@ -116,17 +112,10 @@ const handleDrawerToggle = () => {
   console.log(" navbar rerendered ",Items[0])
   return (
     
-<<<<<<< HEAD
-    <Box sx={{ display: 'flex' ,marginBottom: { xs: '56px', sm: `${64}px` },backgroundColor:'#1976D2'}}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{minHeight:'56px !important'}}>
-        <Toolbar >
-=======
     <Box sx={{ display: 'flex' ,marginBottom: { xs: '56px', sm: `${64}px` }}}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
->>>>>>> 8d8f002425bb935a33992430a196a95dff2ff488
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -142,31 +131,18 @@ const handleDrawerToggle = () => {
             variant="h6"
             component="div"
             color={'rgb(185, 204, 234)'}
-<<<<<<< HEAD
-            mr={2} 
-            sx={{marginTop:'2px'}}>
-            SecureDocs
-          </Typography>
-          
-            {Items.map((item) => {
-=======
             mr={2} >
             INotebook
           </Typography>
           
             {Items.map((item) => {console.log("item ",item,Items)
->>>>>>> 8d8f002425bb935a33992430a196a95dff2ff488
               
               return(
 
             <Typography key={item} mr={2} sx={{ color: '#fff' ,textAlign:'right',flexGrow:((item ==='Logout'|| item ==='Login'  )?'1':'none')}} my={'auto'} >
-<<<<<<< HEAD
                <NavLink to={(item==="Home")?'':item.toLowerCase()} style={LNavLinkStyles} >
                {(item==='Settings')?<SettingsIcon sx={{marginTop:'8px'}} />:item}
                </NavLink>
-=======
-               <NavLink to={(item==="Home")?'':item.toLowerCase()} style={LNavLinkStyles} >{item}</NavLink>
->>>>>>> 8d8f002425bb935a33992430a196a95dff2ff488
                 
               </Typography>
               
@@ -183,11 +159,7 @@ const handleDrawerToggle = () => {
               <SearchIcon  />
             </SearchIconWrapper>
             <StyledInputBase
-<<<<<<< HEAD
               placeholder="Search"
-=======
-              placeholder="Search…"
->>>>>>> 8d8f002425bb935a33992430a196a95dff2ff488
               inputProps={{ 'aria-label': 'search' }}
               onChange={(e)=>setSearchTerm(e.target.value)}
             />
