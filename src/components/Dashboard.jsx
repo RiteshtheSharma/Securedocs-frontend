@@ -211,7 +211,7 @@ fetchCat()
 
           <tbody>
             <tr>
-              <td>username </td>
+              <td>Username </td>
               <td>{UserInfo.name} </td>
             </tr>
             <tr>
